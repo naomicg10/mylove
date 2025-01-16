@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+
+.google-logo img {
+    max-width: 100%;
+}
+
+.google-busqueda {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.busqueda-input {
+    padding: 10px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+}
+
+.busqueda-input::placeholder {
+    color: black; 
+    opacity: 1; 
+}
+
+.busqueda-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: -50px;
+    font-size: 18px;
+    color: #4285f4;
+}
+
+.busqueda-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.tabs {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #4285f4;
+    border-bottom: 2px solid #4285f4;
+    padding-bottom: 5px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    transition: opacity 1s ease-in-out;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-placeholder {
+    background-color: #ddd;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#imageContainer.visible, #tabsContainer.visible {
+    opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+    .google-logo img {
+        margin-top: 50px;
+    }
+
+    .busqueda-input {
+        font-size: 14px;
+        width: 300px;
+    }
+
+    .tabs {
+        font-size: 14px;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-placeholder {
+        height: 130px;
+    }   
+}
