@@ -125,10 +125,13 @@ body {
         width: 300px;
     }
 
+    .busqueda-button {
+        margin-left: -60px;
+    }
+
     .tabs {
         font-size: 14px;
         gap: 10px;
-        margin-bottom: 30px;
     }
 
     .images {
@@ -136,6 +139,6 @@ body {
     }
 
     .image-placeholder {
-        height: 130px;
+        height: 120px;
     }   
 }
